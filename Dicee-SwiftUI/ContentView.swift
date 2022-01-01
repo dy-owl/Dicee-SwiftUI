@@ -13,6 +13,27 @@ struct ContentView: View {
             Image("background")
                 .resizable()
                 .ignoresSafeArea()
+            VStack {
+                Image("diceeLogo")
+                Spacer()
+                HStack {
+                    DiceView(1)
+                    DiceView(2)
+                }
+                .padding(.horizontal)
+                Spacer()
+                Button {
+                    print("Hello World!")
+                } label: {
+                    Text("Roll")
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        
+                }
+                .padding(.horizontal)
+                .background(Color.red)
+            }
         }
     }
 }
